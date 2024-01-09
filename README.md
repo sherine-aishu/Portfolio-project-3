@@ -5,23 +5,24 @@
   
   *ELK is an acronym for 3 open source projects:Elastic search , Logstash and Kibana.*
   
-**Elasticsearch:** 
-  *Elastic search is a distributed serach and analytics engine.*
+  **Elasticsearch:** 
+    *Elastic search is a distributed serach and analytics engine.*
   
-**Logstash:** 
-  *Logstash is an open-source data ingestion tool that allows you to  collect data from various sources, transform it, and send it to your desired destination.*
+  **Logstash:** 
+    *Logstash is an open-source data ingestion tool that allows you to  collect data from various sources, transform it, and send it to your desired destination.*
   
-**Kibana:**
-  *Kibana is a data visualization tool that provides search capabilities for data indexed in Elasticsearch.*
+  **Kibana:**
+    *Kibana is a data visualization tool that provides search capabilities for data indexed in Elasticsearch.*
 
-**Filebeat:**
-  *Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you   specify, collects log events, and forwards them either to Logstash.*
+  **Filebeat:**
+    *Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that 
+     you specify, collects log events, and forwards them either to Logstash.*
 
-***Why to index the data in elastic search?***
+**Why to index the data in elastic search?**
 
-Indexing is essential in Elasticsearch to ensure fast, efficient, and flexible data retrieval.
+*Indexing is essential in Elasticsearch to ensure fast, efficient, and flexible data retrieval.*
 
-***What is the default port of these services?***
+**What is the default port of these services?**
 
 Default port of logstash: 5044
 
