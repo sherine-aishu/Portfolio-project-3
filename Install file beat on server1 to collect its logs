@@ -2,7 +2,7 @@
 curl -L -O  https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.11.3-x86_64.rpm
 sudo rpm -vi filebeat-8.11.3-x86_64.rpm
 
-# Configure filebeat to collect the logs from server
+# Configure filebeat to collect the logs from server1
 cd /etc/filebeat/
 cp filebeat.yml filebeat.yml_bck
 > filebeat.yml
