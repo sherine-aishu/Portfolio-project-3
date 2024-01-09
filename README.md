@@ -2,7 +2,6 @@
 *ELK Setup, this Project primarily focus on how to monitor the server,services and application using elasticsearch,logstash and kibana*
 
 **What is ELK?**
-  
   *ELK is an acronym for 3 open source projects:Elastic search , Logstash and Kibana.*
   
   **Elasticsearch:** 
