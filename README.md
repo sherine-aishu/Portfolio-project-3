@@ -20,6 +20,8 @@ Filebeat is a lightweight shipper for forwarding and centralizing log data. Inst
 Indexing is essential in Elasticsearch to ensure fast, efficient, and flexible data retrieval.
 
 **REQUIREMENTS:** 
+
+
 Server1:
   *We install Elasticsearch , Logstash , Kibana and filebeat service. And instance type should be a minimum of m4.large and storage of 20 GB.*
 
