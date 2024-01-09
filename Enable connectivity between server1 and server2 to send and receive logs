@@ -1,0 +1,7 @@
+Security group of Server1:
+inbound                      port
+server2                      5044
+
+Security group of Server2 :
+outbound                  port
+server1                   5044
