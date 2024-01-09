@@ -1,0 +1,50 @@
+# Follow the portfolio project1 till end.
+As a result of it, you will be able to host a python web app and collect its data on database.
+
+# Generating application logs:
+cp app.py app.py_bck
+> app.py
+vi app.py
+*********************************************************************************************
+from flask import Flask, request, render_template_string
+import logging
+
+app = Flask(__name__)
+logging.basicConfig(filename='/var/log/app.log', level=logging.INFO)
+
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    #ip_address = request.headers.get('X-Real-IP', request.remote_addr)
+    #app.logger.info('Endpoint Accessed: %s, Method: %s', request.path, request.method)
+    app.logger.info('Headers: %s', request.headers)
+    if request.method == 'POST':
+        user_input = request.form['user_input']
+        return render_template_string('''
+            <p>Hello, welcome to this app</p>
+            <form method="post">
+                <input type="text" name="user_input" />
+                <input type="submit" value="OK" />
+            </form>
+            <h2>Thank you, we received your response</h2>
+        ''', user_input=user_input)
+    return render_template_string('''
+        <p>Hello, welcome to this app</p>
+        <form method="post">
+            <input type="text" name="user_input" />
+            <input type="submit" value="OK" />
+        </form>
+    ''')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)
+*********************************************************************************************
+ Note:
+                      Changes made on app.py are:
+                      import logging
+                      app = Flask(__name__)
+                      logging.basicConfig(filename='/var/log/app.log', level=logging.INFO) 
+                      @app.route('/', methods=['GET', 'POST'])
+                      def home():    
+                          app.logger.info('Headers: %s', request.headers)
+
+This change will basically collect all the app header logs and place it in path /var/log/app.log
