@@ -1,0 +1,30 @@
+# Download the filebeat repository and Install the same
+curl -L -O  https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.11.3-x86_64.rpm
+sudo rpm -vi filebeat-8.11.3-x86_64.rpm
+
+# Configure filebeat to collect the logs from server2 and send it to logstash in server1
+cd /etc/filebeat/
+cp filebeat.yml filebeat.yml_bck
+> filebeat.yml
+vi filebeat.yml
+****************************************************************************************
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/seelan.log
+    - /var/log/audit/audit.log
+  fields:
+    server_name: server2
+output.logstash:
+  hosts: ["private-ip-server1:5044"]
+****************************************************************************************
+
+# Start the filebeat service
+sudo systemctl start filebeat
+sudo systemctl enable filebeat
+sudo systemctl status filebeat
+
+
+Note: If you compare the filebeat.yml config of server1 and server2, we could observe a new parameter known as fields been added.
+The reason for adding this is we need to distinguish the logs being collected from server1 and server2. Hence, we need to update the filebeat.yml config of server1 and logstash config of server1.
