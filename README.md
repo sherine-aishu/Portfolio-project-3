@@ -2,19 +2,19 @@
 *ELK Setup, this Project primarily focus on how to monitor the server,services and application using elasticsearch,logstash and kibana*
 
 **What is ELK?**
-  ELK is an acronym for 3 open source projects:Elastic search , Logstash and Kibana.
+  *ELK is an acronym for 3 open source projects:Elastic search , Logstash and Kibana.*
   
 **Elasticsearch:** 
-  Elastic search is a distributed serach and analytics engine.
+  *Elastic search is a distributed serach and analytics engine.*
   
 **Logstash:** 
-  Logstash is an open-source data ingestion tool that allows you to  collect data from various sources, transform it, and send it to your desired destination.
+  *Logstash is an open-source data ingestion tool that allows you to  collect data from various sources, transform it, and send it to your desired destination.*
   
 **Kibana:**
-Kibana is a data visualization tool that provides search capabilities for data indexed in Elasticsearch.
+  *Kibana is a data visualization tool that provides search capabilities for data indexed in Elasticsearch.*
 
 **Filebeat:**
-Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Logstash.
+  *Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you   specify, collects log events, and forwards them either to Logstash.*
 
 ***Why to index the data in elastic search?***
 Indexing is essential in Elasticsearch to ensure fast, efficient, and flexible data retrieval.
@@ -29,10 +29,8 @@ Default port of kibana: 5601
 
 **REQUIREMENTS:** 
 
-
 Server1:
   *We install Elasticsearch , Logstash , Kibana and filebeat service. And instance type should be a minimum of m4.large and storage of 20 GB.*
-
   
 Server2:
   *We need to just install filebeat.*
