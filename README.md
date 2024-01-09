@@ -19,6 +19,11 @@ Filebeat is a lightweight shipper for forwarding and centralizing log data. Inst
 ***Why to index the data in elastic search?***
 Indexing is essential in Elasticsearch to ensure fast, efficient, and flexible data retrieval.
 
+***What is the default port of these services?***
+Default port of logstash: 5044
+Default port of elasticsearch: 9200
+Default port of kibana: 5601
+
 **REQUIREMENTS:** 
 
 
