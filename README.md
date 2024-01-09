@@ -22,6 +22,8 @@ Indexing is essential in Elasticsearch to ensure fast, efficient, and flexible d
 **REQUIREMENTS:** 
 Server1:
   *We install Elasticsearch , Logstash , Kibana and filebeat service. And instance type should be a minimum of m4.large and storage of 20 GB.*
+
+  
 Server2:
   *We need to just install filebeat.*
 
