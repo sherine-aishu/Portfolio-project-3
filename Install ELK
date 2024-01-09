@@ -1,0 +1,31 @@
+Launch Server1 based on the configs specified in requirements (refer: README file)
+
+# Server update
+sudo su
+yum update -y
+
+# Download the ELK repo
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+sudo vi /etc/yum.repos.d/elk.repo	
+*********************************************************************************************************
+[elk]
+	name=Elasticsearch repository for 7.x packages
+	baseurl=https://artifacts.elastic.co/packages/7.x/yum
+	gpgcheck=1
+	gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+	enabled=1
+	autorefresh=1
+	type=rpm-md
+*********************************************************************************************************
+
+# Install ELK and start the services	
+sudo yum install elasticsearch logstash kibana -y
+sudo systemctl start elasticsearch 
+sudo systemctl enable elasticsearch 
+sudo systemctl status elasticsearch
+sudo systemctl start logstash
+sudo systemctl enable logstash
+sudo systemctl status logstash
+sudo systemctl start kibana
+sudo systemctl enable kibana
+sudo systemctl status kibana
