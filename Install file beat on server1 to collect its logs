@@ -1,0 +1,25 @@
+# Download the filebeat repository and Install the same
+curl -L -O  https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.11.3-x86_64.rpm
+sudo rpm -vi filebeat-8.11.3-x86_64.rpm
+
+# Configure filebeat to collect the logs from server
+cd /etc/filebeat/
+cp filebeat.yml filebeat.yml_bck
+> filebeat.yml
+vi filebeat.yml
+********************************************************************************************
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/sherine.log
+    - /var/log/audit/audit.log
+output.logstash:
+  hosts: ["localhost:5044"]
+********************************************************************************************
+
+# Start the filebeat service
+sudo systemctl start filebeat
+sudo systemctl enable filebeat
+sudo systemctl status filebeat
+----------------------------------------
