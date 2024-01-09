@@ -1,0 +1,14 @@
+# Create Index pattern
+Go to stack management --> Select Index pattern
+
+Name: index_server1
+Timestamp: @timestamp
+Create index pattern
+
+Name: index_server2
+Timestamp: @timestamp
+Create index pattern
+
+
+# Access logs using index pattern
+Discover --> select your index pattern --> adjust the timing --> add filter if you want
