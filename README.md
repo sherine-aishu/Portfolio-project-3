@@ -16,7 +16,7 @@
 
   **Filebeat:**
     *Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that 
-     you specify, collects log events, and forwards them either to Logstash.*
+     you specify, collects log events, and forwards them to Logstash.*
 
 **Why to index the data in elastic search?**
 
