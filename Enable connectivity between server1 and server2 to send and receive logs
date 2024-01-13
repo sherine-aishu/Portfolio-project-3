@@ -5,3 +5,7 @@ server2                      5044
 Security group of Server2 :
 outbound                  port
 server1                   5044
+
+Along with this we need to allow port 5044 in server 1 so that traffic from server 2 will be allowed to get in server 1 in port 5044
+  sudo firewall-cmd --permanent --add-port=5044/tcp
+  sudo firewall-cmd --reload
