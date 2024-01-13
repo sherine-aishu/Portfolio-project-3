@@ -6,7 +6,7 @@
   *ELK is an acronym for 3 open source projects:Elastic search , Logstash and Kibana.*
   
   **Elasticsearch:** 
-    *Elastic search is a distributed serach and analytics engine.*
+    *Elastic search is a distributed search and analytics engine.*
   
   **Logstash:** 
     *Logstash is an open-source data ingestion tool that allows you to  collect data from various sources, transform it, and send it to your desired destination.*
