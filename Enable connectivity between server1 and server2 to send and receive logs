@@ -1,6 +1,6 @@
 Security group of Server1:
 inbound                      port
-server2                      5044
+server2                      5044 
 
 Security group of Server2 :
 outbound                  port
@@ -9,3 +9,7 @@ server1                   5044
 Along with this we need to allow port 5044 in server 1 so that traffic from server 2 will be allowed to get in server 1 in port 5044
   sudo firewall-cmd --permanent --add-port=5044/tcp
   sudo firewall-cmd --reload
+
+Check connectivity from server2 to server1 :
+Be in server 2
+telnet public_ip_of_server1 5044
