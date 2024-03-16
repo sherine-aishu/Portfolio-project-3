@@ -17,7 +17,7 @@ filebeat.inputs:
   fields:
     server_name: server2
 output.logstash:
-  hosts: ["private-ip-server1:5044"]
+  hosts: ["public-ip-server1:5044"]
 ****************************************************************************************
 
 # Start the filebeat service
