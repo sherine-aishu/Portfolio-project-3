@@ -1,5 +1,5 @@
 Launch Server1 based on the configs specified in requirements (refer: README file)
-
+SG configuration, All traffic from all IP
 # Server update
 sudo su
 yum update -y
