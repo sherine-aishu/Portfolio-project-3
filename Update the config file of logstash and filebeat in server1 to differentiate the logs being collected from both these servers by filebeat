@@ -13,7 +13,7 @@ output.logstash:
   hosts: ["localhost:5044"]
 ******************************************************************************
 
-# Updating the filebeat.yml file in server1
+# Updating the logstash.conf file in server1
 /etc/logstash/conf.d/logstash.conf 
 ****************************************************************************** 
 input {
