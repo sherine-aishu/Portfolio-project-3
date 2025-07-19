@@ -58,6 +58,9 @@ systemctl enable firewalld.service
 sudo firewall-cmd --permanent --add-port=5601/tcp
 sudo firewall-cmd --reload
 
+# Allowing the ports at server level to access kibana 
+Inbound open port 5601 from Any IPv4 
+
 # Check whether kibana is loading fine locally
 curl -LI http://localhost:5601 (or) curl -LI http://127.0.0.1:5601
 curl -L http://localhost:5601 (or) curl -L http://127.0.0.1:5601
