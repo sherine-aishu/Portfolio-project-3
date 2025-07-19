@@ -38,6 +38,13 @@ def home():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
 *********************************************************************************************
+cd /var/log/
+touch app.log
+sudo chown ec2-user:nginx /var/log/app.log
+sudo chmod 770 /var/log/app.log
+cd /home/ec2-user/app/
+uwsgi --ini /home/ec2-user/app/app.ini
+
  Note:
                       Changes made on app.py are:
                       import logging
